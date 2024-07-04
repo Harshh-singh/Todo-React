@@ -1,9 +1,10 @@
 import './App.css';
+import Tasks from './Components/Tasks/Tasks';
 
 function App() {
   return (
    <div>
-    hlo
+    <Tasks/>
    </div>
   );
 }

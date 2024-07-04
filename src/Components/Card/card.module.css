@@ -1,0 +1,29 @@
+.todocard{
+    display: flex;
+    align-items: center;
+    min-height: 10vh;
+    min-width: 55vw;
+    padding: 0px 1vw;
+    background-color: #3FA2F6;
+    border-radius: 10px;
+}
+.todoDetails{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todoDetails .details span{
+    font-size: 3vh;
+    font-weight: 500;
+    color: #0F67B1;
+    margin-left: 15px;
+}
+
+.todoDetails .details input[type="checkbox"]{
+    height: 2.8vh;
+    width: 3vh;
+}
+.todoDetails img{
+    height: 4vh;
+}
