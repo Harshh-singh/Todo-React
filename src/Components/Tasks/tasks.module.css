@@ -1,12 +1,10 @@
 .tasksList{
     display: flex;
-    gap: 15px;
     flex-direction: column;
     align-items: center;
     padding-top: 5vh;
     height: 100vh;
     background-color: #FAFFAF;
-    overflow: auto;
 }
 .heading{
     display: flex;
@@ -21,4 +19,12 @@
     font-size: 4vh;
     font-weight: 650;
     font-family: sans-serif;
+}
+.tasksList .tasks{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 63%;
+    overflow: auto;
+    scrollbar-width: none;
 }
