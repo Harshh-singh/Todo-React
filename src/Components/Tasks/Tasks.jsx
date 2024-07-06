@@ -1,8 +1,18 @@
 import Card from "../Card/TodoCard";
 import AddTodo from "../AddTodo/AddTodo";
 import styles from './tasks.module.css';
+import {useSelector, useDispatch} from 'react-redux';
+import { fetchTodosAsync } from "../../redux/TodoReducer";
+import { useEffect } from "react";
 
 function Tasks() {
+    const tasks = useSelector((state)=>state.todoReducers.todos);
+    const dispatch = useDispatch();
+
+    useEffect(()=>{
+        dispatch(fetchTodosAsync());
+    },[dispatch]);
+    
     return(
         <div className={styles.tasksList}>
             <div className={styles.heading}>
@@ -10,11 +20,9 @@ function Tasks() {
                 <span>Todo App</span>
             </div>
             <div className={styles.tasks}>
-                <Card title={"Complete Your Project"}/>
-                <Card title={"Go to the Gym"}/>
-                <Card title={"Drink 2 liter of water"}/>
-                <Card title={"Eat 3000 calories"}/>               
-                             
+               {tasks.map((task, index)=>
+               <Card todo={task} key={index}/>
+            )}                                            
             </div>
             <AddTodo/>
         </div>
